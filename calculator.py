@@ -1,8 +1,4 @@
 
-import math
-def add(a, b): 
-    return a + b
-
 # https://github.com/Lethanial-Leveille/lab11-LL-DW.git
 # Partner 1: Lethanial Leveille
 # Partner 2: Dylan Wells
