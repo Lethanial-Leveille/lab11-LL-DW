@@ -1,9 +1,18 @@
-
 # https://github.com/Lethanial-Leveille/lab11-LL-DW.git
 # Partner 1: Lethanial Leveille
 # Partner 2: Dylan Wells
 
 import math
+
+def square_root(a):
+    """Return sqrt(a). Raise ValueError if a < 0."""
+    if a < 0:
+        raise ValueError("square_root input must be non-negative")
+    return math.sqrt(a)
+
+def hypotenuse(a, b):
+    """Return the hypotenuse given legs a and b."""
+    return math.hypot(a, b)
 
 def add(a, b):
     return a + b
@@ -13,8 +22,6 @@ def subtract(a, b):
 
 def multiply(a, b):
     return a * b
-
-
 
 def logarithm(a, b):
     # log base a of b
@@ -26,7 +33,6 @@ def logarithm(a, b):
 
 def exponent(a, b):
     return a ** b
-
 
 def sub(a, b):
     return a - b
