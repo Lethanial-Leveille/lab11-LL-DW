@@ -31,16 +31,22 @@ class TestCalculator(unittest.TestCase):
             div(0, 5)
 
     ######## Partner 2
-    def test_divide_by_zero(self): # 1 assertion
-         self.assertRaises(ZeroDivisionError, div(0, 5))
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 5)
 
     def test_logarithm(self): # 3 assertions
         self.assertEqual(logarithm(2,4), 2)
         self.assertEqual(logarithm(2,8), 3)
         self.assertEqual(logarithm(2,16), 4)
 
-    def test_log_invalid_base(self): # 1 assertion
-        self.assertRaises(ValueError, logarithm(-1, 1))
+    def test_log_invalid_base(self):
+        # base <= 0
+        with self.assertRaises(ValueError):
+            logarithm(-1, 10)
+        # base == 1
+        with self.assertRaises(ValueError):
+            logarithm(1, 10)
     ##########################
     
     ######## Partner 1
